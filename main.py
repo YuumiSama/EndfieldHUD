@@ -1566,11 +1566,12 @@ class AboutPage(QWidget):
         desc = BodyLabel(
             "一个基于屏幕识别的连携监测工具。\n"
             "不修改游戏文件、不读取游戏内存。\n"
-            "仅供个人学习使用。", self
+            "仅供个人学习使用，所有代码来源DeepSeek。", self
         )
         layout.addWidget(desc)
         
-        repo_url = "https://github.com/yourname/EndfieldHUD"
+        # GitHub 仓库
+        repo_url = "https://github.com/YuumiSama/EndfieldHUD"
         repo_card = CardWidget(self)
         repo_layout = QHBoxLayout(repo_card)
         repo_layout.setContentsMargins(20, 15, 20, 15)
@@ -1590,7 +1591,8 @@ class AboutPage(QWidget):
         
         layout.addWidget(repo_card)
         
-        update_url = "https://github.com/yourname/EndfieldHUD/releases"
+        # 更新页面
+        update_url = "https://github.com/YuumiSama/EndfieldHUD/releases"
         update_card = CardWidget(self)
         update_layout = QHBoxLayout(update_card)
         update_layout.setContentsMargins(20, 15, 20, 15)
@@ -1610,8 +1612,28 @@ class AboutPage(QWidget):
         
         layout.addWidget(update_card)
         
+        # 哔哩哔哩
+        bilibili_url = "https://space.bilibili.com/89139193"
+        bilibili_card = CardWidget(self)
+        bilibili_layout = QHBoxLayout(bilibili_card)
+        bilibili_layout.setContentsMargins(20, 15, 20, 15)
+        
+        bilibili_icon = BodyLabel(self)
+        bilibili_icon.setPixmap(FluentIcon.LINK.icon().pixmap(32, 32))
+        bilibili_layout.addWidget(bilibili_icon)
+        
+        bilibili_text_layout = QVBoxLayout()
+        bilibili_text_layout.addWidget(StrongBodyLabel("哔哩哔哩", bilibili_card))
+        bilibili_text_layout.addWidget(BodyLabel(bilibili_url, bilibili_card))
+        bilibili_layout.addLayout(bilibili_text_layout, 1)
+        
+        bilibili_btn = PushButton("打开", bilibili_card)
+        bilibili_btn.clicked.connect(lambda: QDesktopServices.openUrl(QUrl(bilibili_url)))
+        bilibili_layout.addWidget(bilibili_btn)
+        
+        layout.addWidget(bilibili_card)
+        
         layout.addStretch()
-
 
 # ============================================================
 # 主窗口
