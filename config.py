@@ -18,6 +18,7 @@ DEFAULT_CONFIG = {
     "close_to_tray": True,
     "close_choice_made": False,
     "theme": "dark",
+    "language": "zh_CN",
     "character_count": 4,
     "auto_hide_when_no_game": False,
     "auto_hide_no_bar": False,
@@ -25,8 +26,8 @@ DEFAULT_CONFIG = {
     "fade_duration": 300,
     
     # ===== 预设相关 =====
-    "apply_preset_pos": False,      # 切换预设时应用坐标
-    "preview_enabled": True,        # 启用预览
+    "apply_preset_pos": False,
+    "preview_enabled": True,
     
     # ===== 悬浮窗样式 =====
     "overlay_style": "bar",
@@ -102,6 +103,15 @@ DEFAULT_CONFIG = {
     "log_to_file": False,
     "log_max_lines": 500,
     "log_file_max_lines": 1000,
+
+    # ===== 采样 / 平滑 =====
+    "sample_preset": "normal",
+    "sample_interval_custom": 200,
+    "sample_interval_hidden_custom": 1000,
+    "smooth_enabled": True,
+    "smooth_window": 5,
+    "smooth_mode": "median",
+    "sample_when_overlay_off": False,
     
     # ===== 调试 =====
     "debug_mode": False,
@@ -146,7 +156,6 @@ def load_config():
             save_config(DEFAULT_CONFIG)
             return DEFAULT_CONFIG.copy()
     else:
-        # 首次启动：用内置预设的样式初始化
         config = DEFAULT_CONFIG.copy()
         try:
             from presets import BUILTIN_PRESETS
