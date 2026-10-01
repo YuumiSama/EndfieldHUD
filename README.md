@@ -51,7 +51,8 @@ cd EndfieldHUD
 pip install -r requirements.txt
 
 # 运行
-python main.py```
+python main.py
+```
 
 ## 注意事项
 
