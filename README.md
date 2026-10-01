@@ -4,7 +4,7 @@
 
 🌟 点一下右上角的 **Star**，就能收到软件更新通知了哦~
 
-[简体中文](README.md) | [English](README_EN.md) | [繁體中文](README_TW.md)
+[简体中文] | [English](README_EN.md) | [繁體中文](README_TW.md)
 
 ## 功能简介
 
