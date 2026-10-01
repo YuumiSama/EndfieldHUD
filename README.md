@@ -51,22 +51,23 @@ cd EndfieldHUD
 pip install -r requirements.txt
 
 # 运行
-python main.py
-```
+python main.py```
 
-注意事项
-遇到问题请在 Issues 反馈
+## 注意事项
 
-纯 Python 图像识别，不修改游戏文件、不读取游戏内存
+- 遇到问题请在 [Issues](https://github.com/YuumiSama/EndfieldHUD/issues) 反馈
+- 纯 Python 图像识别，**不修改游戏文件、不读取游戏内存**
+- 请勿遮挡左下角，会影响识别精度
+- 识别过程中会占用少量系统资源
 
-请勿遮挡左下角，会影响识别精度
+## 免责声明
 
-识别过程中会占用少量系统资源
-
-免责声明
 本工具仅供个人学习使用，不修改游戏文件、不读取游戏内存。使用本工具产生的任何问题，与开发者无关。
 
-License
+## License
+
 MIT
+
+---
 
 如果觉得这个项目有帮助，可以点个 Star ⭐ 支持一下~
