@@ -1,0 +1,8 @@
+PyQt5
+PyQt-Fluent-Widgets
+opencv-python
+mss
+numpy
+keyboard
+pywin32
+Pillow
